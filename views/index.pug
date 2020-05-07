@@ -1,0 +1,9 @@
+extends layout
+block content
+   h1 #{title}
+   ul
+      each article, i in articles
+         a(href='/article/'+article._id)
+            li= article.title
+   a(href='/article/add') Add Article
+
